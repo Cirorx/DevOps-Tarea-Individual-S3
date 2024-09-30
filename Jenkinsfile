@@ -1,14 +1,14 @@
 pipeline {
     agent any
     stages {
-        stage('Build') {
+        stage('Rezando') {
             steps {
-                echo 'Building...'
+                echo 'Rezando a los dioses de DevOps...'
             }
         }
-        stage('Test') {
+        stage('Alivio') {
             steps {
-                echo 'Testing...'
+                echo 'Comprobar que el webhook llega'
             }
         }
         stage('Deploy') {
