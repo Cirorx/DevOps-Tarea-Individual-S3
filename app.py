@@ -1,11 +1,11 @@
-FROM python:3.9-slim
+from flask import Flask
 
-WORKDIR /usr/local/app
+app = Flask(__name__)
 
-COPY requirements.txt ./
-RUN pip install -r requirements.txt
+@app.route('/')
+def hello():
+    return "Hola Mundo desde Flask!"
 
-COPY . .
-EXPOSE 5000
+if __name__ == '__main__':
+    app.run(host='0.0.0.0', port=5000)
 
-CMD ["python", "app.py"]
