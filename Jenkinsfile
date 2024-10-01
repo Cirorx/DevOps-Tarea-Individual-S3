@@ -27,12 +27,7 @@ pipeline {
         }
         stage('Alivio') {
             steps {
-                echo 'Comprobar que el webhook llega'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'Deploying...'
+                echo 'Contenedor con Flask fue creado'
             }
         }
     }
